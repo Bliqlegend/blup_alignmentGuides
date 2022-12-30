@@ -1,0 +1,85 @@
+
+// void onTapDown(BuildContext context, TapDownDetails details) {
+//   // creating instance of renderbox
+//   final RenderBox box = context.findRenderObject() as RenderBox;
+//   // find the coordinate
+//   final Offset localOffset = box.globalToLocal(details.globalPosition);
+//   setState(() {
+//     posx = localOffset.dx;
+//     posy = localOffset.dy;
+//     // this string contain the x and y coordinates.
+//     Txt = 'Tapped\nX:$posx \nY:$posy';
+//   });
+
+// GestureDetector(
+        //   // onTapDown: (TapDownDetails details) => onTapDown(context, details),
+        //   onPanUpdate: (DragUpdateDetails details) {
+        //     final RenderBox box = context.findRenderObject() as RenderBox;
+        //     final Offset offsetDrag = box.globalToLocal(details.globalPosition);
+        //
+        //     setState(() {
+        //       Circle2posx = offsetDrag.dx;
+        //       Circle2posy = offsetDrag.dy;
+        //       Txt = 'Dragging 1\nX:$Circle2posx \nY:$Circle2posy';
+        //     });
+        //   },
+        //   child: Stack(
+        //     fit: StackFit.expand,
+        //     children: <Widget>[
+        //       Container(color: Colors.white),
+        //       Positioned(
+        //         // show the coordinates.
+        //         left: Circle2posx,
+        //         top: Circle2posy,
+        //         child: rectangle(Tx, Colors.yellowt),
+        //       ),
+        //     ],
+        //   ),
+        // ),
+        // GestureDetector(
+        //   // onTapDown: (TapDownDetails details) => onTapDown(context, details),
+        //   onPanUpdate: (DragUpdateDetails details) {
+        //     final RenderBox box1 = context.findRenderObject() as RenderBox;
+        //     final Offset offsetDrag1 =
+        //         box1.globalToLocal(details.globalPosition);
+        //
+        //     setState(() {
+        //       posx = offsetDrag1.dx;
+        //       posy = offsetDrag1.dy;
+        //       Txt = 'Dragging 2\nX:$posx \nY:$posy';
+        //     });
+        //   },
+        //   child: Stack(
+        //     fit: StackFit.expand,
+        //     children: <Widget>[
+        //       Container(color: Colors.white),
+        //       Positioned(
+        //         // show the coordinates.
+        //         left: posx,
+        //         top: posy,
+        //         child: rectangle(Txt, Colors.blue),
+        //       ),
+        //     ],
+        //   ),
+        // ),
+        //  Second circle
+
+
+
+
+if (((text1Left + 'Hello'.length) - (text2Left + 'Mellow'.length)).abs() <= 5 && (text1top-text2top).abs() <=3*30) {
+                    positionedGuidelines.clear();
+                    positionedGuidelines.add(
+                      Positioned(
+                        left: text1Left + 'Hello'.length,
+                        top: text1top,
+                        child: Container(
+                          height: (text2top - text1top).abs() + 1.1 * 30,
+                          width: 2,
+                          color: Colors.pink,
+                        ),
+                      ),
+                    );
+                  }
+
+                  (text1top - text2top).abs() <= 3 * 30
