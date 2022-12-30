@@ -64,7 +64,8 @@ class MyWidgetState extends State<MyWidget> {
                   text1top = max(0, text1top + details.delta.dy);
 
                   //left alignment
-                  if ((text1Left - text2Left).abs() <= 1.5) {
+                  if ((text1Left - text2Left).abs() <= 1.5 &&
+                      (text1top - text2top).abs() <= 3 * 30) {
                     positionedGuidelines.clear();
                     double heightVariable = (text2top - text1top).abs();
                     int heightVarInt = heightVariable.toInt();
@@ -104,7 +105,8 @@ class MyWidgetState extends State<MyWidget> {
                     positionedGuidelines.clear();
                   }
                   //right alignment
-                  if (((text1Left + flen) - (text2Left + slen)).abs() <= 1) {
+                  if (((text1Left + flen) - (text2Left + slen)).abs() <= 1 &&
+                      (text1top - text2top).abs() <= 3 * 30) {
                     positionedGuidelines.clear();
                     double heightVariable = (text2top - text1top).abs();
                     int heightVarInt = heightVariable.toInt();
@@ -143,7 +145,8 @@ class MyWidgetState extends State<MyWidget> {
                   }
                   //center alignemnt
                   if (((text1Left + flen / 2) - (text2Left + slen / 2)).abs() <=
-                      1) {
+                          1 &&
+                      (text1top - text2top).abs() <= 3 * 30) {
                     positionedGuidelines.clear();
                     double heightVariable = (text2top - text1top).abs();
                     int heightVarInt = heightVariable.toInt();
@@ -207,7 +210,8 @@ class MyWidgetState extends State<MyWidget> {
                   double heightVariable = (text2top - text1top).abs();
                   int heightVarInt = heightVariable.toInt();
                   //left alignment
-                  if ((text1Left - text2Left).abs() <= 1.5) {
+                  if ((text1Left - text2Left).abs() <= 1.5 &&
+                      (text1top - text2top).abs() <= 3 * 30) {
                     positionedGuidelines.clear();
                     positionedGuidelines.add(
                       Positioned(
@@ -245,7 +249,8 @@ class MyWidgetState extends State<MyWidget> {
                     positionedGuidelines.clear();
                   }
                   //right alignment
-                  if (((text1Left + flen) - (text2Left + slen)).abs() <= 1) {
+                  if (((text1Left + flen) - (text2Left + slen)).abs() <= 1 &&
+                      (text1top - text2top).abs() <= 3 * 30) {
                     positionedGuidelines.clear();
                     double heightVariable = (text2top - text1top).abs();
                     int heightVarInt = heightVariable.toInt();
@@ -284,7 +289,8 @@ class MyWidgetState extends State<MyWidget> {
                   }
                   //centerAlignment
                   if (((text1Left + flen / 2) - (text2Left + slen / 2)).abs() <=
-                      1) {
+                          1 &&
+                      (text1top - text2top).abs() <= 3 * 30) {
                     positionedGuidelines.clear();
                     double heightVariable = (text2top - text1top).abs();
                     int heightVarInt = heightVariable.toInt();
